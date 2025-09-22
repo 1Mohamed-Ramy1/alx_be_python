@@ -10,11 +10,11 @@ match priority:
     case "low":
         message = f"Note: '{task}' is a low priority task"
     case _:
-        message = f"'{task}' has an undefined priority"
+        message = f"Note: '{task}' has an undefined priority"
 
 if time_bound == "yes" and priority in ["high", "medium"]:
     message += " that requires immediate attention today!"
 elif priority in ["high", "medium"]:
-    message += ". Consider scheduling it soon."
+    message += ". Consider completing it when you have free time."
 
 print(message)
